@@ -19,7 +19,7 @@ netsh interface ipv6 set global randomizeidentifiers=disabled
 
 rem 检查是否定义了 MAC 地址
 if defined mac_addr (
-    for /f %%a in ('wmic nic where "MACAddress='%mac_addr%'  and Description  like '%%AWS%%'" get InterfaceIndex ^| findstr [0-9]') do set id=%%a
+    for /f %%a in ('wmic nic where " Description  like '%%AWS%%'" get InterfaceIndex ^| findstr [0-9]') do set id=%%a
     if defined id (
         rem 配置静态 IPv4 地址和网关
         if defined ipv4_addr if defined ipv4_gateway (
