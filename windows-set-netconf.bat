@@ -14,7 +14,7 @@ rem set ipv6_dns2=::2
 mode con cp select=437 >nul
 setlocal EnableDelayedExpansion
 
-timeout /t 30
+timeout /t 120
 
 rem 禁用 IPv6 地址标识符的随机化，防止 IPv6 和后台面板不一致
 netsh interface ipv6 set global randomizeidentifiers=disabled
