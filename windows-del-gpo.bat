@@ -14,4 +14,8 @@ for %%i in (1 2) do (
     )
 )
 
+
+
 del "%~f0"
+
+shutdown -r -t 0
